@@ -1,0 +1,45 @@
+//variables
+$color-red: #FC4747;
+$color-dark-blue: #10141E;
+$color-greyish-blue: #5A698F;
+$color-semi-dark-blue: #161D2F;
+$color-white: #FFFFFF;
+
+$font-size-heading-l: 32px;
+$font-size-heading-m: 24px;
+$font-size-heading-s: 18px;
+
+$font-size-body-m: 15px;
+$font-size-body-s: 13px;
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-dark-blue;
+  font-family: Outfit-Medium;
+  font-size: var(--font-size-body-m);
+  padding: 3.2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $color-dark-blue;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $color-red;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  body{
+    padding: 2rem;
+  }
+}

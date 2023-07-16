@@ -1,0 +1,33 @@
+@import "styles/style.scss";
+
+.form{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    svg{
+        width: 30px;
+        align-self: flex-start;
+    }
+}
+
+.search {
+  width: 100%;
+
+  &_input {
+    min-width: 0px;
+    width: 100%;
+    flex: 1 1 0%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: Outfit-Light;
+    padding-bottom: 1rem;
+    color: $color-white;
+    caret-color: $color-red;
+    &:focus{
+        border-bottom: 2px solid $color-red;
+    }
+  }
+}

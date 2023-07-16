@@ -1,0 +1,47 @@
+@import 'styles/style.scss';
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-semi-dark-blue;
+    box-sizing: border-box;
+
+    min-height: 90vh;
+    width: 96px;
+    padding: 1.5rem;
+
+    border-radius: 1rem;
+    
+    &_user img{
+        width: 50px;
+    }
+}
+
+.nav{
+    &_item svg{
+        width: 30px;
+        height: 50px;
+        &:hover{
+            transform: scale(1.06);
+        }
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .header{
+        width: 100%;
+        min-height: 96px;
+        flex-direction: row;
+        svg{
+            width: 30px;
+            height: 25px;
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}

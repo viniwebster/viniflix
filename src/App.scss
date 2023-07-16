@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.movies-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 3rem;
+}
+
+@media screen and (max-width: 890px) {
+    .container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .movies-container{
+        justify-content: center;
+    }
+}
