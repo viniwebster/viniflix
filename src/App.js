@@ -4,8 +4,7 @@ import Search from 'components/Search';
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from 'pages/Home';
-import PageMovies from 'pages/Movies';
-import Series from 'pages/Series';
+import Template from 'pages/Template';
 
 function App() {
   return (
@@ -16,8 +15,8 @@ function App() {
           <Search />
           <Routes>
             <Route index element={<Home />} />  
-            <Route path='movies' element={<PageMovies />}/>
-            <Route path='series' element={<Series />}/>
+            <Route path='movies' element={<Template selector="Movie" title={"Movies"} />}/>
+            <Route path='series' element={<Template selector="TV Series" title={"Series"}/>}/>
           </Routes>
         </main>
       </BrowserRouter>

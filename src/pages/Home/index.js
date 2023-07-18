@@ -9,10 +9,11 @@ export default function Home() {
   return (
     <>
     <Trending />
-      <section>
+      <section >
         <h1>Recomend for you</h1> 
         <ul className="movies-container">
-            {movies.map( movie => <Cards 
+            {movies.map( (movie, index) => <Cards
+            key={index} 
             title={movie.title} 
             img={movie.thumbnail.regular.medium} 
             year={movie.year} 

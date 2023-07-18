@@ -8,7 +8,7 @@ import { ReactComponent as IconFav } from "./assets/icon-bookmark-empty.svg";
 export default function Cards({ title, img, year, category, rating, size, slide }) {
   return (
     <li className={`${styles.card} ${styles[size]} ${slide}`}>
-      <img src={img} alt={`Poster from ${title}`} />
+      <img src={img} alt={`${title} poster`} />
       <div className={`${styles.card_infos}`}>
         <div className={styles.card_infos_info}>
           <p>{year}</p>

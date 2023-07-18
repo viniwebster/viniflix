@@ -1,14 +1,14 @@
 import 'App.scss';
 import React from "react";
-import Movies from "data.json";
+import data from "data.json";
 import Cards from "components/Cards";
 
-export default function PageMovies() {
-  const movies = Movies.filter((item) => item.category === "Movie");
+export default function Template({selector, title}) {
+  const movies = data.filter((item) => item.category === selector);
 
   return (
     <section>
-      <h1>Movies</h1>
+      <h1>{title}</h1>
       <ul className="movies-container">
         {movies.map((item, index) => (
           <Cards

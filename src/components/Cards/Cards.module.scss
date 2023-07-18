@@ -63,19 +63,25 @@
     position: absolute;
     z-index: 2;
 
-    transform: translate(65%, -370%);
+    transform: translate(65%, -360%);
     cursor: pointer;
   }
 }
 
 .large {
-  width: 480px;
+  width: 420px;
   height: 220px;
+  
   position: relative;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
 
   .overlay {
     &_btn {
-      transform: translate(130%, -340%);
+      transform: translate(120%, -300%);
     }
   }
 
@@ -99,6 +105,16 @@
         p {
           color: rgb(171, 168, 168);
         }
+      }
+    }
+  }
+  &:hover {
+    transform: scale(1);
+    transition: transform 0.3s ease 0s;
+
+    .overlay {
+      &_btn {
+        display: flex;
       }
     }
   }
