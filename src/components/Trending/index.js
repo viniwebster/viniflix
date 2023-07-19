@@ -1,14 +1,14 @@
 import styles from "./Trending.module.scss";
 import React from "react";
-import trending from "data.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Cards from "components/Cards";
 
-export default function Trending() {
-  const itensTrending = trending.filter((item) => item.isTrending);
+export default function Trending({ data }) {
+  const itensTrending = data.filter((item) => item.isTrending);
 
   return (
+    itensTrending.length > 0 ? 
     <section className={styles.trending}>
       <h2>Trending</h2>
       <Swiper spaceBetween={50} slidesPerView={3}>
@@ -29,5 +29,6 @@ export default function Trending() {
         </ul>
       </Swiper>
     </section>
+    : ""
   );
 }

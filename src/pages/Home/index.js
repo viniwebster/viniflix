@@ -1,27 +1,27 @@
-import styles from './Home.module.scss';
 import 'App.scss';
 import React from 'react';
-import movies from 'data.json';
 import Cards from 'components/Cards';
 import Trending from 'components/Trending';
 
-export default function Home() {
+export default function Home({data}) {
   return (
+    data.length > 0 ?
     <>
-    <Trending />
+    <Trending data={data}/>
       <section >
         <h1>Recomend for you</h1> 
         <ul className="movies-container">
-            {movies.map( (movie, index) => <Cards
+            {data.map( (item, index) => <Cards
             key={index} 
-            title={movie.title} 
-            img={movie.thumbnail.regular.medium} 
-            year={movie.year} 
-            category={movie.category}
-            rating={movie.rating}
+            title={item.title} 
+            img={item.thumbnail.regular.medium} 
+            year={item.year} 
+            category={item.category}
+            rating={item.rating}
             />)}
         </ul>
-      </section>
+      </section> 
     </>
+    : <h1>Busca não encontrada</h1>  
   )
 }
