@@ -11,7 +11,16 @@ export default function Trending({ data }) {
     itensTrending.length > 0 ? 
     <section className={styles.trending}>
       <h2>Trending</h2>
-      <Swiper spaceBetween={50} slidesPerView={3}>
+      <Swiper spaceBetween={100} breakpoints={{
+          900: {
+            slidesPerView: 2,
+          },
+
+          1700: {
+            slidesPerView: 3,
+          }
+        }
+      }>
         <ul>
           {itensTrending.map((item, index) => (
             <SwiperSlide>
