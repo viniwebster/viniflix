@@ -24,6 +24,9 @@ export default function Cards({ title, img, year, category, rating, size, slide 
           Play
         </button>
       </div>
+      <div className={styles.fav}>
+          <IconFav />
+        </div>
     </li>
   );
 }

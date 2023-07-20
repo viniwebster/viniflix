@@ -9,7 +9,7 @@ export default function Home({data}) {
     <>
     <Trending data={data}/>
       <section >
-        <h1>Recomend for you</h1> 
+        <h1>Recommended for you</h1> 
         <ul className="movies-container">
             {data.map( (item, index) => <Cards
             key={index} 

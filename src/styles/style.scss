@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
 //variables
 $color-red: #FC4747;
 $color-dark-blue: #10141E;
 $color-greyish-blue: #5A698F;
 $color-semi-dark-blue: #161D2F;
 $color-white: #FFFFFF;
+
+$font-primary: 'Montserrat', sans-serif;
 
 $font-size-heading-l: 32px;
 $font-size-heading-m: 24px;
@@ -23,6 +27,7 @@ body {
   padding: 3.2rem;
   min-height: 100vh;
   box-sizing: border-box;
+  font-family: $font-primary;
 }
 
 body::-webkit-scrollbar {
