@@ -4,8 +4,9 @@ import { ReactComponent as Play } from "./assets/icon-play.svg";
 import { ReactComponent as IconTv } from "./assets/icon-category-tv.svg";
 import { ReactComponent as IconMovie } from "./assets/icon-category-movie.svg";
 import { ReactComponent as IconFav } from "./assets/icon-bookmark-empty.svg";
+import { ReactComponent as FavFull} from "./assets/icon-bookmark-full.svg";
 
-export default function Cards({ title, img, year, category, rating, size, slide }) {
+export default function Cards({ title, img, year, category, rating, size, slide, movie, id, favorite }) {
   return (
     <li className={`${styles.card} ${styles[size]} ${slide}`}>
       <img src={img} alt={`${title} poster`} />
@@ -25,8 +26,12 @@ export default function Cards({ title, img, year, category, rating, size, slide 
         </button>
       </div>
       <div className={styles.fav}>
-          <IconFav />
-        </div>
+      {
+        !movie 
+        ? <IconFav onClick={() => favorite(id)}/> 
+        : <FavFull onClick={() => favorite(id)}/>
+      }
+      </div>
     </li>
   );
 }

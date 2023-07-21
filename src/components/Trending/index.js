@@ -5,7 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import Cards from "components/Cards";
 
-export default function Trending({ data }) {
+export default function Trending({ data, favorite }) {
   const itensTrending = data.filter((item) => item.isTrending);
 
   return itensTrending.length > 0 ? (
@@ -26,16 +26,20 @@ export default function Trending({ data }) {
         autoplay={{ delay: 5000 }}
       >
         <ul>
-          {itensTrending.map((item, index) => (
+          {itensTrending.map((item) => (
             <SwiperSlide style={{ height: 250 }}>
               <Cards
-                key={index}
+                key={item.id}
                 title={item.title}
                 img={item.thumbnail.regular.large}
                 year={item.year}
                 category={item.category}
                 rating={item.rating}
                 size={"large"}
+                data={data}
+                id={item.id}
+                favorite={favorite}
+                movie={item.fav}
               />
             </SwiperSlide>
           ))}

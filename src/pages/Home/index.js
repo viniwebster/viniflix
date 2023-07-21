@@ -1,27 +1,15 @@
 import 'App.scss';
 import React from 'react';
-import Cards from 'components/Cards';
 import Trending from 'components/Trending';
+import Template from 'pages/Template';
 
-export default function Home({data}) {
+export default function Home({data, favorite}) {
   return (
     data.length > 0 ?
     <>
-    <Trending data={data}/>
-      <section >
-        <h1>Recommended for you</h1> 
-        <ul className="movies-container">
-            {data.map( (item, index) => <Cards
-            key={index} 
-            title={item.title} 
-            img={item.thumbnail.regular.medium} 
-            year={item.year} 
-            category={item.category}
-            rating={item.rating}
-            />)}
-        </ul>
-      </section> 
+      <Trending data={data} favorite={favorite}/>
+      <Template title={"Recommended for you"} data={data} favorite={favorite}/>
     </>
-    : <h1>Busca não encontrada</h1>  
+    : <h1>Not found</h1>  
   )
 }
